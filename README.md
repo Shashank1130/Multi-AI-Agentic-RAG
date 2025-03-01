@@ -1,4 +1,4 @@
-# Multi-AI Agent RAG System
+# Multi-AI Agentic RAG System
 
 This project showcases a **Multi-AI Agent Retrieval-Augmented Generation (RAG) system** built using **Agno** and **LangChain**. It integrates **8 intelligent agents** to enable dynamic query routing, accurate database retrieval, and seamless external data sourcing, delivering precise and context-aware responses.
 
