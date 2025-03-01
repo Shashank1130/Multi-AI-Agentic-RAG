@@ -51,20 +51,20 @@ def process_pdfs(folder_path, chunk_size=1000, chunk_overlap=200, embedding_mode
     vector_store.save_local(r"D:\End To End RAG (2.0)\DEMO\2-vector_dbs\railways")
     print("Embedding and FAISS indexing done!")
 
-# Fianance DB
-# folder_path = r"D:\End To End RAG (2.0)\DEMO\1-data\fianance"
+# Finance DB
+# folder_path = r"your_folder_path_for_finance_files"
 # process_pdfs(folder_path=folder_path)
 
 # Agriculture DB
-# folder_path = r"D:\End To End RAG (2.0)\DEMO\1-data\agriculture"
+# folder_path = r"your_folder_path_for_agriculture_files"
 # process_pdfs(folder_path=folder_path)
 
 # Defence DB
-# folder_path = r"D:\End To End RAG (2.0)\DEMO\1-data\defence"
+# folder_path = r"your_folder_path_for_defence_files"
 # process_pdfs(folder_path=folder_path)
 
 # Railways DB
-# folder_path = r"D:\End To End RAG (2.0)\DEMO\1-data\railways"
+# folder_path = r"your_folder_path_for_railways_files"
 # process_pdfs(folder_path=folder_path)
 
 
