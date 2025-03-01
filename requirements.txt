@@ -1,0 +1,8 @@
+langchain
+langchain-openai
+groq
+agno
+duckduckgo-search
+faiss-cpu
+yahoo-finance
+langchain-community
