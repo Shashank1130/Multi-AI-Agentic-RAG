@@ -55,3 +55,34 @@ This project showcases a **Multi-AI Agent Retrieval-Augmented Generation (RAG) s
 python -m venv env
 source env/bin/activate  # On Windows: .\env\Scripts\activate
 pip install -r requirements.txt
+```
+
+#### 2. Configure API keys:
+Create a .env file in the root directory.
+Add your API keys in the following format:
+```bash
+OPENAI_API_KEY=your_api_key_here
+GROQ_API_KEY=your_api_key_here
+```
+
+### 3. Prepare vectorized databases:
+Run the following script to process and store data:
+```bash
+python chunking_and_vectorstore.py
+```
+
+#### 4. Run the main script:
+Execute the following command to start the main script:
+```bash
+python agentic_rag_main.py
+```
+
+📋 Usage
+Run agentic_rag_main.py and input your query.
+The routing agent will automatically select the most relevant agent, process the query, and provide an accurate response.
+
+
+🛠 Future Enhancements
+Expand Agent Capabilities: Add more domain-specific and external data agents to broaden the system's versatility.
+Improve Routing Logic: Optimize the algorithm for faster and more accurate query handling.
+Integrate Advanced Data Sources: Enhance the system’s external data retrieval by incorporating additional APIs and web scraping tools.
