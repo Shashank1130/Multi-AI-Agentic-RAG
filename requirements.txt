@@ -6,3 +6,4 @@ duckduckgo-search
 faiss-cpu
 yahoo-finance
 langchain-community
+PyPDF2
