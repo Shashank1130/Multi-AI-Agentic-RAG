@@ -14,10 +14,10 @@ load_dotenv()
 
 # Load FAISS DBs
 embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
-defense_db = FAISS.load_local(r"D:\End To End RAG (2.0)\DEMO\2-vector_dbs\defence", embeddings, allow_dangerous_deserialization=True)
-agriculture_db = FAISS.load_local(r"D:\End To End RAG (2.0)\DEMO\2-vector_dbs\agriculture", embeddings, allow_dangerous_deserialization=True)
-railways_db = FAISS.load_local(r"D:\End To End RAG (2.0)\DEMO\2-vector_dbs\railways", embeddings, allow_dangerous_deserialization=True)
-finance_db = FAISS.load_local(r"D:\End To End RAG (2.0)\DEMO\2-vector_dbs\fianance", embeddings, allow_dangerous_deserialization=True)
+defense_db = FAISS.load_local(r"vector_db\defence", embeddings, allow_dangerous_deserialization=True)
+agriculture_db = FAISS.load_local(r"vector_db\agriculture", embeddings, allow_dangerous_deserialization=True)
+railways_db = FAISS.load_local(r"vector_db\railways", embeddings, allow_dangerous_deserialization=True)
+finance_db = FAISS.load_local(r"vector_db\fianance", embeddings, allow_dangerous_deserialization=True)
 
 # Define FAISS Retrievers
 defense_retriever = defense_db.as_retriever(search_kwargs={"k": 5})
@@ -151,17 +151,14 @@ router_agent = Agent(
 
 
 # Example Query
-# query = "In what temperature does sugarcane grow?"
-# query = "Who is satya nadela?"
-# query = "What are the cancellation policy if IRCTC?"
-# # query = "In what temperature does sugarcane grow?"
-# query = "what are defence major capital procurement?"
-# query = "Tell me about the investments of india in 2022-23?"
-# query = "What are the stocks price of Tata Motors for last 1 year?"
-# query = "What is the latest stock price of APPLE?"
-# query = "What is the latest news about OPENAI"
-query = "Write a short blog about Latest trends in AI Agents?"
+# query = "In what temperature does sugarcane grow?" # agriculture
+# query = "What are the cancellation policy if IRCTC?" # railways
+# query = "what are defence major capital procurement?" # defence
+# query = "Tell me about the investments of india in 2022-23?" # finance_ministry
+# query = "What is the latest stock price of APPLE?" # finance
+# query = "What is the latest news about OPENAI" # web_search
+query = "Write a short blog about Latest trends in AI Agents?" # content_creation
 
 
 router_agent.print_response(query, stream=True)
-# print(respose.messages)
+
