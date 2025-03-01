@@ -25,10 +25,7 @@ This project showcases a **Multi-AI Agent Retrieval-Augmented Generation (RAG) s
 
 ---
 
-## 📂 Project Structure
-
-- `agents/` : Contains code for all 8 agents.  
-- `router/` : Manages the query routing logic.  
+## 📂 Project Structure  
 - `data/` : Includes sample databases and relevant data files.  
 - `vector_db/` : Stores vectorized data for fast retrieval.  
 - `.env` : Contains API keys and environment variables.  
